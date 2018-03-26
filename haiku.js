@@ -994,16 +994,16 @@ var fs = require("fs");
                     conjugatedVerb += "s";
                 }
             }
-        } 
+        } // Present participle
         else if (verbTense == verbTenses.presentParticiple) {
-            if (vowels.includes(infinitive.slice(-2, -1)) &&
+            if (infinitive.slice(-1) == "y") {
+                conjugatedVerb += "ing";
+            }
+            else if (vowels.includes(infinitive.slice(-2, -1)) &&
             consonants.includes(infinitive.slice(-1)) &&
             !vowels.includes(infinitive.slice(-3, -2)) &&
             infinitive.slice(-1) != 'w') {
                 conjugatedVerb += conjugatedVerb.slice(-1);
-                conjugatedVerb += "ing";
-            }
-            else if (infinitive.slice(-1) == "y") {
                 conjugatedVerb += "ing";
             }
             else if (infinitive.slice(-1) == "e") {
@@ -1035,9 +1035,9 @@ var fs = require("fs");
             
         } 
         else if (verbTense == verbTenses.pastParticiple) {
-            if (vowels.includes(infinitive.slice(-2, -1)) &&
-            consonants.includes(infinitive.slice(-1)) &&
-            !vowels.includes(infinitive.slice(-3, -2))) {
+            if (vowels.includes(infinitive.slice(-2, -1)) && // Second to last is a vowel
+            consonants.includes(infinitive.slice(-1)) &&     // Last is a consonant
+            !vowels.includes(infinitive.slice(-3, -2))) {    // Third to last is a consonant
                 conjugatedVerb += conjugatedVerb.slice(-1);
                 conjugatedVerb += "ed";
             }
