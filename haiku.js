@@ -996,7 +996,7 @@ var fs = require("fs");
             }
         } // Present participle
         else if (verbTense == verbTenses.presentParticiple) {
-            if (infinitive.slice(-1) == "y") {
+            if (infinitive.slice(-1) == "y" || infinitive.slice(-1) == "x") {
                 conjugatedVerb += "ing";
             }
             else if (vowels.includes(infinitive.slice(-2, -1)) &&
