@@ -1,0 +1,86 @@
+body {
+    background: #DA4453;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(left, #89216B, #DA4453);
+    background: -moz-linear-gradient(left, #89216B, #DA4453);
+    background: -o-linear-gradient(left, #89216B, #DA4453);
+    background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header {
+    background-color: #242424;
+    color: white;
+    height: 65px;
+}
+
+.inner-header {
+    
+}
+
+h1 {
+    display:block;
+    padding-top: 12px;
+    margin: auto;
+    text-align: center;
+    
+}
+
+#button-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#haiku-container {
+    display:block;
+    margin: 0 auto;
+}
+
+#main-container {
+    color: white;
+    /*font-size: 45px;*/
+    font-size: 3vw;
+    
+    height: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    #main-container {
+        color: white;
+        font-size: 20px;
+        height: 80%;
+    }
+    
+    #button-container {
+        text-align:center;
+    }
+    
+    #haiku {
+        text-align:center;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    #main-container {
+        color: white;
+        font-size: 33px;
+        height: 80%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #main-container {
+        color: white;
+        font-size: 38px;
+        height: 80%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #main-container {
+        color: white;
+        font-size: 45px;
+        height: 80%;
+    }
+}
+
+

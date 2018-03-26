@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/master.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class = "header">
+            <div class="ui container inner-header"><h1>haikugen</h1></div>
+        </div>
+        <div class="ui container centered middle aligned grid" id = "main-container">
+            <div id = "haiku-container" class="ui stackable two column centered middle aligned grid">
+                <div class = "ten wide column" id="haiku">
+                <p>
+                <%=haiku.line1%><br>
+                <%=haiku.line2%><br>
+                <%=haiku.line3%>
+                </div>
+                <div class = "three wide column" id = "button-container">
+                    <a href="/" class = "huge ui inverted button" id="haiku-button">Generate New</a>
+                </div>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
