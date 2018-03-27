@@ -888,7 +888,7 @@ var fs = require("fs");
                     return;
                 }
                 for (var i = data.length - 1; i >= 0; i--) {
-                    if (data[i]["numSyllables"] != numberOfSyllables) {
+                    if (data[i]["numSyllables"] != numberOfSyllables || !checkIfOnNounList(data[i]["word"])) {
                         data.splice(i, 1);
                     }
                 }
@@ -902,11 +902,11 @@ var fs = require("fs");
                 var newNounSyllables = data[index]["numSyllables"];
                 var newNoun = data[index]["word"];
                 
-                // Try another call if number of syllables is incorrect
                 if (newNounSyllables == numberOfSyllables) {
                     callback(newNoun);
                     return;
                 } else {
+                    // Try another call if number of syllables is incorrect
                     getRandomRelatedNoun(numberOfSyllables, word, callback);
                     return;
                 }
@@ -944,6 +944,10 @@ var fs = require("fs");
             } else {
                 return "a";
             }
+        }
+        
+        function checkIfOnNounList(word) {
+            return nounList.includes(word.trim().toLowerCase());
         }
         
         function chanceToGetString(stringArray, probabilityInOne) {
